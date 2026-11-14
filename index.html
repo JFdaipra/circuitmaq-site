@@ -15,7 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Circuitmaq Automações","description":"Painéis elétricos industriais, automação industrial, placas eletrônicas dedicadas e softwares industriais sob medida.","email":"comercial@circuitmaq.com.br","telephone":"+55 54 99674-2455","address":{"@type":"PostalAddress","addressLocality":"Marau","addressRegion":"RS","addressCountry":"BR"},"areaServed":"Norte do Rio Grande do Sul"}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Circuitmaq Automações","description":"Painéis elétricos industriais, automação industrial, placas eletrônicas dedicadas e softwares industriais sob medida.","email":"comercial@circuitmaq.com.br","telephone":"+55 54 99674-2455","address":{"@type":"PostalAddress","streetAddress":"Av. Júlio Borella, 3553, sala 108","postalCode":"99150-000","addressLocality":"Marau","addressRegion":"RS","addressCountry":"BR"},"areaServed":"Norte do Rio Grande do Sul"}
 </script>
 </head>
 <body>
@@ -268,17 +268,7 @@
         <ul><li>Vídeo da abertura e da inspeção dos lotes, ligado ao número do lote</li><li>Gravação da separação e da embalagem</li><li>Etiqueta única por item ou pedido, vinculada ao vídeo</li></ul>
       </article>
     </div>
-    <div class="vr">
-      <a class="vid" id="video" href="#video" aria-label="Assistir ao vídeo Caos na indústria">
-        <span class="play"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
-        <span class="vt"><small>Vídeo · 6 min</small>Caos na indústria</span>
-      </a>
-      <figure>
-        <img src="img/recpro-banner.jpg" alt="Tela do sistema REC-PRO de controle de qualidade por vídeo" loading="lazy">
-        <figcaption>Tela do REC-PRO</figcaption>
-      </figure>
-    </div>
-    <p class="vmsg" id="video-msg" role="status"></p>
+    <figure class="solo"><img src="img/recpro-banner.jpg" alt="Tela do sistema REC-PRO de controle de qualidade por vídeo" loading="lazy"><figcaption>Tela do REC-PRO</figcaption></figure>
     <div style="margin-top:34px"><a class="btn btn-or" href="#contato" data-tipo="Quero conhecer os sistemas de registro de qualidade">Quero conhecer os sistemas</a></div>
   </div>
 </section>
@@ -293,7 +283,7 @@
         <div class="lines" style="color:var(--navy)">
           <div class="row" style="border-color:#c3cfd9"><svg viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.7-5.2A8.5 8.5 0 1 1 21 12z"/></svg><div><small style="color:var(--blue2)">WhatsApp</small><a href="https://wa.me/5554996742455" target="_blank" rel="noopener" style="color:var(--navy)">(54) 99674-2455</a></div></div>
           <div class="row" style="border-color:#c3cfd9"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><small style="color:var(--blue2)">E-mail</small><a href="mailto:comercial@circuitmaq.com.br" style="color:var(--navy)">comercial@circuitmaq.com.br</a></div></div>
-          <div class="row" style="border-bottom:0"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><small style="color:var(--blue2)">Onde estamos</small><span style="color:var(--navy)">Marau, Rio Grande do Sul</span></div></div>
+          <div class="row" style="border-bottom:0"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><small style="color:var(--blue2)">Onde estamos</small><span style="color:var(--navy)">Av. Júlio Borella, 3553, sala 108<br>Marau, Rio Grande do Sul</span></div></div>
         </div>
       </div>
       <form id="form-contato" novalidate>
@@ -330,7 +320,7 @@
         <h4>Contato</h4>
         <a href="https://wa.me/5554996742455" target="_blank" rel="noopener">WhatsApp (54) 99674-2455</a>
         <a href="mailto:comercial@circuitmaq.com.br">comercial@circuitmaq.com.br</a>
-        <span>Marau, Rio Grande do Sul</span>
+        <span>Av. Júlio Borella, 3553, sala 108<br>Marau, Rio Grande do Sul</span>
       </div>
     </div>
     <div class="bt"><span>© Circuitmaq Automações</span><a href="privacidade.html" style="display:inline">Política de privacidade</a></div>
@@ -339,6 +329,7 @@
 
 <script>
 (function(){
+  var FORM='https://docs.google.com/forms/d/e/1FAIpQLSf9HrHbwFcQR3-Zk2F7Qei3eI_qoQyMX4kxDKCI-W3QB34m6g/formResponse';
   var sel=document.getElementById('f-tipo');
   document.querySelectorAll('[data-tipo]').forEach(function(a){
     a.addEventListener('click',function(){
@@ -346,15 +337,20 @@
       for(var i=0;i<sel.options.length;i++){ if(sel.options[i].text===v){ sel.selectedIndex=i; break; } }
     });
   });
-  var VIDEO_URL='';\n  var vd=document.getElementById('video');\n  vd.addEventListener('click',function(e){ e.preventDefault(); if(VIDEO_URL){ window.open(VIDEO_URL,'_blank','noopener'); } else { document.getElementById('video-msg').textContent='O vídeo será publicado em breve.'; } });\n  var f=document.getElementById('form-contato'), out=document.getElementById('f-msg-ok');
+  var f=document.getElementById('form-contato'), out=document.getElementById('f-msg-ok'), btn=f.querySelector('button[type=submit]');
+  var g=function(id){return document.getElementById(id).value.trim();};
   f.addEventListener('submit',function(e){
     e.preventDefault();
-    var g=function(id){return document.getElementById(id).value.trim();};
     if(!g('f-nome')||!g('f-empresa')||!g('f-email')){ out.textContent='Preencha nome, empresa e e-mail.'; return; }
     if(!document.getElementById('f-ok').checked){ out.textContent='Marque a concordância para enviar.'; return; }
-    var corpo='Nome: '+g('f-nome')+'\nEmpresa: '+g('f-empresa')+'\nE-mail: '+g('f-email')+'\nTelefone: '+g('f-tel')+'\nCaso: '+sel.value+'\n\n'+g('f-msg');
-    window.location.href='mailto:comercial@circuitmaq.com.br?subject='+encodeURIComponent('Contato pelo site: '+sel.value)+'&body='+encodeURIComponent(corpo);
-    out.textContent='Abrimos o seu aplicativo de e-mail com a mensagem pronta. É só enviar.';
+    var d=new URLSearchParams();
+    d.set('entry.2007063546',g('f-nome')); d.set('entry.404182354',g('f-empresa')); d.set('entry.1370167429',g('f-email'));
+    d.set('entry.1959211769',g('f-tel')); d.set('entry.1980407430',sel.value); d.set('entry.1473329648',g('f-msg'));
+    btn.disabled=true; out.textContent='Enviando...';
+    fetch(FORM,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:d.toString()})
+      .then(function(){ f.reset(); out.textContent='Recebemos a sua solicitação. Nossa equipe retorna em breve.'; })
+      .catch(function(){ out.innerHTML='Não foi possível enviar agora. Fale conosco pelo <a href="https://wa.me/5554996742455" target="_blank" rel="noopener">WhatsApp</a> ou por <a href="mailto:comercial@circuitmaq.com.br">e-mail</a>.'; })
+      .then(function(){ btn.disabled=false; });
   });
 })();
 </script>

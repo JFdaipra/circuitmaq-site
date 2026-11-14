@@ -208,3 +208,6 @@ footer .bt{border-top:1px solid rgba(255,255,255,.12);margin-top:34px;padding-to
 .hero .chips span{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.35);color:#fff}
 .hero .frame img{box-shadow:0 24px 60px -20px rgba(0,0,0,.65)}
 @media(max-width:900px){.hero:before{background:linear-gradient(180deg,rgba(11,34,55,.94),rgba(17,49,77,.82))}}
+.vr figure.solo,figure.solo{margin:30px 0 0;max-width:820px;position:relative;border-radius:12px;overflow:hidden}
+figure.solo img{width:100%;display:block;box-shadow:0 24px 50px -28px rgba(0,0,0,.6)}
+figure.solo figcaption{position:absolute;left:14px;bottom:12px;font:700 11.5px/1 var(--title);letter-spacing:.12em;text-transform:uppercase;background:rgba(11,34,55,.85);color:#fff;padding:8px 10px;border-radius:5px}
