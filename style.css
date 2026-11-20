@@ -253,3 +253,6 @@ figure.solo figcaption{position:absolute;left:14px;bottom:12px;font:700 11.5px/1
 .cta p{margin:0;font-size:16px}
 @media(max-width:700px){.cta{grid-template-columns:1fr}}
 .more{padding:56px 0 90px}
+/* blog: cabecalho do post nao deve ser fixo */
+main header{position:static;backdrop-filter:none;border-bottom:0;z-index:auto}
+.pc p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
