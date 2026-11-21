@@ -330,7 +330,7 @@
 
 <script>
 (function(){
-  var FORM='https://docs.google.com/forms/d/e/1FAIpQLSf9HrHbwFcQR3-Zk2F7Qei3eI_qoQyMX4kxDKCI-W3QB34m6g/formResponse';
+  var FORM='https://docs.google.com/forms/d/e/1FAIpQLSecUAmB2SQyQxVN8B-dgSI75b9qxerlfmAloVvZRpXYdyDxlQ/formResponse';
   var sel=document.getElementById('f-tipo');
   document.querySelectorAll('[data-tipo]').forEach(function(a){
     a.addEventListener('click',function(){
@@ -345,8 +345,8 @@
     if(!g('f-nome')||!g('f-empresa')||!g('f-email')){ out.textContent='Preencha nome, empresa e e-mail.'; return; }
     if(!document.getElementById('f-ok').checked){ out.textContent='Marque a concordância para enviar.'; return; }
     var d=new URLSearchParams();
-    d.set('entry.2007063546',g('f-nome')); d.set('entry.404182354',g('f-empresa')); d.set('entry.1370167429',g('f-email'));
-    d.set('entry.1959211769',g('f-tel')); d.set('entry.1980407430',sel.value); d.set('entry.1473329648',g('f-msg'));
+    d.set('entry.1594606388',g('f-nome')); d.set('entry.1946539334',g('f-empresa')); d.set('entry.360238422',g('f-email'));
+    d.set('entry.1877078588',g('f-tel')); d.set('entry.253880028',sel.value); d.set('entry.917640775',g('f-msg'));
     btn.disabled=true; out.textContent='Enviando...';
     fetch(FORM,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:d.toString()})
       .then(function(){ f.reset(); out.textContent='Recebemos a sua solicitação. Nossa equipe retorna em breve.'; })
